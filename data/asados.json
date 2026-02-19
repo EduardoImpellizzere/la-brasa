@@ -1,0 +1,54 @@
+[
+  {
+    "id": "ef6b3e52-e6dd-45fa-aacd-f9de3ffc81f3",
+    "creadoEn": "2026-02-19T15:03:45.602Z",
+    "nombre": "Asado de prueba",
+    "fecha": "2025-02-22",
+    "hora": "13:00",
+    "lugar": "Casa de Facu",
+    "estado": "planeado",
+    "participantes": [
+      "Juan",
+      "Laura"
+    ]
+  },
+  {
+    "id": "7df359c8-b705-40af-bfc4-cbdb38d5eeee",
+    "creadoEn": "2026-02-19T15:04:08.600Z",
+    "nombre": "Asado de prueba 2",
+    "fecha": "2025-02-22",
+    "hora": "13:00",
+    "lugar": "Casa de Facu",
+    "estado": "planeado",
+    "participantes": [
+      "Juan",
+      "Laura"
+    ]
+  },
+  {
+    "id": "21389653-c48f-4972-b0b6-d42c641a9118",
+    "creadoEn": "2026-02-19T15:06:04.675Z",
+    "nombre": "Asado de prueba 2",
+    "fecha": "2025-02-22",
+    "hora": "13:00",
+    "lugar": "Casa de Facu",
+    "estado": "planeado",
+    "participantes": [
+      "Juan",
+      "Laura"
+    ]
+  },
+  {
+    "id": "89f8d445-fe23-47fb-9973-86742c9be672",
+    "creadoEn": "2026-02-19T15:52:27.433Z",
+    "nombre": "Asado de prueba",
+    "fecha": "2025-02-22",
+    "hora": "13:00",
+    "lugar": "Casa de Facu",
+    "estado": "planeado",
+    "participantes": [
+      "Juan",
+      "Laura"
+    ]
+  }
+]
