@@ -12,14 +12,14 @@ export default function Page() {
     estado: "planeado",
     participantes: [],
   });
-  const [participant, setParticipant] = useState("");
+  const [newParticipant, setNewParticipant] = useState("");
 
   const router = useRouter();
 
-  function addParticipant() {
-    const updatedParticipants = [...form.participantes, participant];
+  function handleAddParticipant() {
+    const updatedParticipants = [...form.participantes, newParticipant];
     setForm({ ...form, participantes: updatedParticipants });
-    setParticipant("");
+    setNewParticipant("");
   }
 
   async function handleSubmit(e) {
@@ -57,10 +57,10 @@ export default function Page() {
         onChange={(e) => setForm({ ...form, estado: e.target.value })}
       />
       <input
-        value={participant}
-        onChange={(e) => setParticipant(e.target.value)}
+        value={newParticipant}
+        onChange={(e) => setNewParticipant(e.target.value)}
       />
-      <button type="button" onClick={addParticipant}>
+      <button type="button" onClick={handleAddParticipant}>
         Agregar
       </button>
 

@@ -27,17 +27,17 @@ function searchById(id, file) {
   return file.filter((gastos) => gastos.asadoId === id);
 }
 
-function totalCosts(id, file, gastos) {
-  const asado = file.find((asado) => asado.id === id);
-  const totalPersonas = asado.participantes.length;
+function totalCosts(id, file, expenses) {
+  const match = file.find((item) => item.id === id);
+  const totalPeople = match.participantes.length;
 
-  const totalCostos = gastos
-    .map((gasto) => gasto.monto)
-    .reduce((acumulador, valor) => acumulador + valor, 0);
+  const totalCost = expenses
+    .map((expense) => expense.monto)
+    .reduce((total, value) => total + value, 0);
 
-  const cuotaIdeal = totalCostos / totalPersonas;
+  const sharePerPerson = totalCost / totalPeople;
 
-  return { totalCostos, cuotaIdeal };
+  return { totalCost, sharePerPerson };
 }
 
 export async function POST(request, context) {
@@ -60,10 +60,10 @@ export async function GET(_, context) {
     const parsedDBGastos = readFile(DB_PATH_GASTOS);
     const parsedDBAsados = readFile(DB_PATH_ASADOS);
 
-    const gastos = searchById(id, parsedDBGastos);
-    const costos = totalCosts(id, parsedDBAsados, gastos);
+    const expenses = searchById(id, parsedDBGastos);
+    const summary = totalCosts(id, parsedDBAsados, expenses);
 
-    return Response.json({ gastos, costos }, { status: 200 });
+    return Response.json({ expenses, summary }, { status: 200 });
   } catch (error) {
     return Response.json({ error: error.message }, { status: 500 });
   }

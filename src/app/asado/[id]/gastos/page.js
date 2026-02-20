@@ -15,7 +15,7 @@ export default async function Page({ params }) {
   return (
     <div>
       <GastosForm id={id} />
-      {data.gastos.map((gasto) => (
+      {data.expenses.map((gasto) => (
         <ul key={gasto.id}>
           <li>{gasto.quien}</li>
           <li>{gasto.descripcion}</li>
@@ -23,8 +23,8 @@ export default async function Page({ params }) {
         </ul>
       ))}
       <div>
-        <div>Total: {data.costos.totalCostos}</div>
-        <div>Reparto por igual: {data.costos.cuotaIdeal}</div>
+        <div>Total: {data.summary.totalCost}</div>
+        <div>Reparto por igual: {data.summary.sharePerPerson}</div>
       </div>
     </div>
   );
