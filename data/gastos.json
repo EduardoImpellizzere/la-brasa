@@ -1,26 +1,26 @@
 [
   {
-    "id": "01b5600f-9198-46f4-9f82-3a3efba803a2",
-    "asadoId": "e7b54ae3-c905-4c2a-9fb9-40411c0c5783",
-    "quien": "Juan",
-    "descripcion": "Nafta",
-    "monto": 125,
-    "creadoEn": "2026-02-20T11:51:32.470Z"
-  },
-  {
-    "id": "e065de32-299d-46f5-9d69-f31b91608ea3",
-    "asadoId": "e7b54ae3-c905-4c2a-9fb9-40411c0c5783",
-    "quien": "Maria",
-    "descripcion": "Ensalada",
-    "monto": 40,
-    "creadoEn": "2026-02-20T11:52:31.053Z"
-  },
-  {
-    "id": "c532703e-52e0-421b-b076-ec61c7442119",
-    "asadoId": "e7b54ae3-c905-4c2a-9fb9-40411c0c5783",
+    "id": "12189088-2c44-4bbf-8f59-5cdd62b7db4b",
+    "asadoId": "82f9d684-7911-4030-a123-1240902ea438",
     "quien": "Edu",
     "descripcion": "Carne",
-    "monto": "2000",
-    "creadoEn": "2026-02-20T13:27:57.333Z"
+    "monto": 70,
+    "creadoEn": "2026-02-20T18:39:01.443Z"
+  },
+  {
+    "id": "0ec2850c-f306-4c70-9998-bf0bb953262e",
+    "asadoId": "82f9d684-7911-4030-a123-1240902ea438",
+    "quien": "Lau",
+    "descripcion": "Ensalada",
+    "monto": 10,
+    "creadoEn": "2026-02-20T18:39:35.018Z"
+  },
+  {
+    "id": "38572f4f-e02e-41c4-bf3a-dbb836a41b19",
+    "asadoId": "82f9d684-7911-4030-a123-1240902ea438",
+    "quien": "Sergio",
+    "descripcion": "Gasolina",
+    "monto": 13.5,
+    "creadoEn": "2026-02-20T18:40:03.918Z"
   }
 ]

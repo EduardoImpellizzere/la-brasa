@@ -1,52 +1,18 @@
 [
   {
-    "id": "e7b54ae3-c905-4c2a-9fb9-40411c0c5783",
-    "creadoEn": "2026-02-19T21:19:24.528Z",
-    "nombre": "a",
-    "fecha": "s",
-    "hora": "d",
-    "lugar": "f",
-    "estado": "planeado",
-    "participantes": ["aa", "ss", "dd"]
-  },
-  {
-    "id": "8f19df45-f9d9-4916-9e03-e18351db32fa",
-    "creadoEn": "2026-02-19T21:21:05.322Z",
-    "nombre": "A",
-    "fecha": "a",
-    "hora": "s",
-    "lugar": "d",
-    "estado": "planeado",
-    "participantes": ["f"]
-  },
-  {
-    "id": "8bab8ce7-dd04-4a74-9e75-d26e5fd1dba1",
-    "creadoEn": "2026-02-19T21:44:23.666Z",
-    "nombre": "asd",
-    "fecha": "d",
-    "hora": "as",
-    "lugar": "s",
-    "estado": "planeado",
-    "participantes": ["asd", "d"]
-  },
-  {
-    "id": "c4652c84-867f-41ba-96c1-0927adb98c35",
-    "creadoEn": "2026-02-19T21:51:29.502Z",
-    "nombre": "s",
-    "fecha": "d",
-    "hora": "d",
-    "lugar": "f",
-    "estado": "planeado",
-    "participantes": ["aa", "ss", "dd"]
-  },
-  {
-    "id": "7a7de7db-b91d-42b0-b94a-940766f580e0",
-    "creadoEn": "2026-02-19T21:57:42.853Z",
-    "nombre": "s",
-    "fecha": "s",
-    "hora": "sss",
-    "lugar": "ss",
-    "estado": "planeado",
-    "participantes": ["d", "sa", "asd"]
+    "id": "82f9d684-7911-4030-a123-1240902ea438",
+    "creadoEn": "2026-02-20T18:31:25.167Z",
+    "nombre": "Asado 1",
+    "fecha": "2026-02-25",
+    "hora": "19:30",
+    "lugar": "Pobla de farnals",
+    "estado": "confirmado",
+    "participantes": [
+      "Edu",
+      "Lau",
+      "Sergio",
+      "Anto",
+      "Bruno"
+    ]
   }
 ]

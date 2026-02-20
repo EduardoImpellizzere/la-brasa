@@ -1,50 +1,26 @@
 [
   {
-    "id": "6f4a1ed0-1d50-4890-bc7c-962c9e3bf092",
-    "asadoId": "e7b54ae3-c905-4c2a-9fb9-40411c0c5783",
-    "nombre": "Ensalada",
-    "quien": "Juan",
-    "estado": "pendiente",
-    "creadoEn": "2026-02-19T23:07:27.170Z"
-  },
-  {
-    "id": "afde22bf-50ec-4542-bac5-734426bc5f2a",
-    "asadoId": "e7b54ae3-c905-4c2a-9fb9-40411c0c5783",
+    "id": "7fb2e52e-b285-4e21-b0c7-417cf7712c48",
+    "asadoId": "82f9d684-7911-4030-a123-1240902ea438",
     "nombre": "Carne",
-    "quien": "Juan",
-    "estado": "pendiente",
-    "creadoEn": "2026-02-19T23:10:21.148Z"
-  },
-  {
-    "id": "4defc08c-aea4-474e-bfad-d9654fcbd475",
-    "asadoId": "e7b54ae3-c905-4c2a-9fb9-40411c0c5783",
-    "nombre": "Cubiertos",
     "quien": "Edu",
-    "estado": "pendiente",
-    "creadoEn": "2026-02-19T23:47:39.737Z"
+    "estado": "confirmado",
+    "creadoEn": "2026-02-20T18:32:28.449Z"
   },
   {
-    "id": "a49f8128-682f-49ce-9b91-877c30beab1f",
-    "asadoId": "e7b54ae3-c905-4c2a-9fb9-40411c0c5783",
-    "nombre": "Bandejas",
-    "quien": "Pepito",
+    "id": "550d8e86-aa5d-4813-8c89-36ac897b06f6",
+    "asadoId": "82f9d684-7911-4030-a123-1240902ea438",
+    "nombre": "Ensalada",
+    "quien": "Lau",
     "estado": "pendiente",
-    "creadoEn": "2026-02-19T23:53:04.073Z"
+    "creadoEn": "2026-02-20T18:33:27.371Z"
   },
   {
-    "id": "6c5e1522-99e3-4ba2-b20f-770097a7ee4c",
-    "asadoId": "e7b54ae3-c905-4c2a-9fb9-40411c0c5783",
-    "nombre": "asd",
-    "quien": "asd",
-    "estado": "pendiente",
-    "creadoEn": "2026-02-19T23:53:51.152Z"
-  },
-  {
-    "id": "2e278997-4e42-4b37-876c-e4e10c4ef178",
-    "asadoId": "e7b54ae3-c905-4c2a-9fb9-40411c0c5783",
-    "nombre": "zxc",
-    "quien": "zxc",
-    "estado": "pendiente",
-    "creadoEn": "2026-02-19T23:54:04.276Z"
+    "id": "c05e98de-a6c3-47bc-a77e-fd2220521a6a",
+    "asadoId": "82f9d684-7911-4030-a123-1240902ea438",
+    "nombre": "Cubiertos y platos",
+    "quien": "Anto",
+    "estado": "confirmado",
+    "creadoEn": "2026-02-20T18:33:57.154Z"
   }
 ]

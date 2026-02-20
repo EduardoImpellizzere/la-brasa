@@ -1,24 +1,36 @@
+import { notFound } from "next/navigation";
 import ItemForm from "./ItemForm";
+import { ESTADOS_ITEM } from "@/lib/opciones";
+import Link from "next/link";
 
 export default async function Page({ params }) {
   const { id } = await params;
 
-  const response = await fetch(`http://localhost:3000/api/asados/${id}/items`, {
-    method: "GET",
-  });
+  const [responseItems, responseAsado] = await Promise.all([
+    fetch(`http://localhost:3000/api/asados/${id}/items`),
+    fetch(`http://localhost:3000/api/asados/${id}`),
+  ]);
 
-  const data = await response.json();
+  const items = await responseItems.json();
+  const asado = await responseAsado.json();
+
+  if (asado.error) {
+    notFound();
+  }
 
   return (
     <div>
-      <ItemForm id={id} />
-      {data.map((item) => (
+      <p>Quien lleva que cosa</p>
+      <ItemForm id={id} participantes={asado.participantes} />
+      {items.map((item) => (
         <ul key={item.id}>
           <li>{item.nombre}</li>
           <li>{item.quien}</li>
-          <li>{item.estado}</li>
+          <li>{ESTADOS_ITEM.find((e) => e.value === item.estado)?.label}</li>
         </ul>
       ))}
+
+      <Link href={`/asado/${id}`}>Volver</Link>
     </div>
   );
 }

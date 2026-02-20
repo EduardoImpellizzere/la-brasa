@@ -3,9 +3,9 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function GastosForm({ id }) {
+export default function GastosForm({ id, participantes = [] }) {
   const [form, setForm] = useState({
-    quien: "",
+    quien: participantes[0] ?? "",
     descripcion: "",
     monto: 0,
   });
@@ -14,28 +14,43 @@ export default function GastosForm({ id }) {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    const response = await fetch(
-      `http://localhost:3000/api/asados/${id}/gastos`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      },
-    );
+    await fetch(`http://localhost:3000/api/asados/${id}/gastos`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
 
     router.refresh();
+
+    setForm({
+      quien: participantes[0] ?? "",
+      descripcion: "",
+      monto: 0,
+    });
   }
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
+      <p>Quien:</p>
+      <select
         value={form.quien}
         onChange={(e) => setForm({ ...form, quien: e.target.value })}
-      />
+      >
+        {participantes.map((item) => (
+          <option key={item} value={item}>
+            {item}
+          </option>
+        ))}
+      </select>
+
+      <p>Cuanto:</p>
       <input
+        type="number"
         value={form.monto}
-        onChange={(e) => setForm({ ...form, monto: e.target.value })}
+        onChange={(e) => setForm({ ...form, monto: Number(e.target.value) })}
       />
+
+      <p>En que?</p>
       <input
         value={form.descripcion}
         onChange={(e) => setForm({ ...form, descripcion: e.target.value })}

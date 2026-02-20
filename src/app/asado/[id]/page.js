@@ -1,3 +1,5 @@
+import { ESTADOS_ASADO } from "@/lib/opciones";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export default async function Page({ params }) {
@@ -14,15 +16,23 @@ export default async function Page({ params }) {
   }
 
   return (
-    <ul>
-      <li>{data.nombre}</li>
-      <li>{data.fecha}</li>
-      <li>{data.hora}</li>
-      <li>{data.lugar}</li>
-      <li>{data.estado}</li>
-      {data.participantes.map((person) => (
-        <li key={person}>{person}</li>
-      ))}
-    </ul>
+    <>
+      <ul>
+        <li>Nombre: {data.nombre}</li>
+        <li>Fecha: {data.fecha}</li>
+        <li>Hora: {data.hora}</li>
+        <li>Lugar: {data.lugar}</li>
+        <li>
+          Estado: {ESTADOS_ASADO.find((e) => e.value === data.estado)?.label}
+        </li>
+        <p>Quienes van:</p>
+        {data.participantes.map((person) => (
+          <li key={person}>{person}</li>
+        ))}
+      </ul>
+      <Link href={`/asado/${id}/items`}>Items</Link>
+      <Link href={`/asado/${id}/gastos`}>Gastos</Link>
+      <Link href={`/asado/${id}/transporte`}>Transporte</Link>
+    </>
   );
 }

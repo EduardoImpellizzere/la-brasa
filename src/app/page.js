@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { ESTADOS_ASADO } from "@/lib/opciones";
+import Link from "next/link";
 
 export default function Page() {
   const [form, setForm] = useState({
@@ -35,42 +37,64 @@ export default function Page() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        value={form.nombre}
-        onChange={(e) => setForm({ ...form, nombre: e.target.value })}
-      />
-      <input
-        value={form.fecha}
-        onChange={(e) => setForm({ ...form, fecha: e.target.value })}
-      />
-      <input
-        value={form.hora}
-        onChange={(e) => setForm({ ...form, hora: e.target.value })}
-      />
-      <input
-        value={form.lugar}
-        onChange={(e) => setForm({ ...form, lugar: e.target.value })}
-      />
-      <input
-        value={form.estado}
-        onChange={(e) => setForm({ ...form, estado: e.target.value })}
-      />
-      <input
-        value={newParticipant}
-        onChange={(e) => setNewParticipant(e.target.value)}
-      />
-      <button type="button" onClick={handleAddParticipant}>
-        Agregar
-      </button>
+    <>
+      <form onSubmit={handleSubmit}>
+        <p>Nombre:</p>
+        <input
+          value={form.nombre}
+          onChange={(e) => setForm({ ...form, nombre: e.target.value })}
+        />
 
-      <ul>
-        {form.participantes.map((person) => (
-          <li key={person}>{person}</li>
-        ))}
-      </ul>
+        <p>Fecha:</p>
+        <input
+          type="date"
+          value={form.fecha}
+          onChange={(e) => setForm({ ...form, fecha: e.target.value })}
+        />
 
-      <button type="submit">Enviar</button>
-    </form>
+        <p>Hora:</p>
+        <input
+          type="time"
+          value={form.hora}
+          onChange={(e) => setForm({ ...form, hora: e.target.value })}
+        />
+
+        <p>Lugar:</p>
+        <input
+          value={form.lugar}
+          onChange={(e) => setForm({ ...form, lugar: e.target.value })}
+        />
+
+        <p>Estado:</p>
+        <select
+          value={form.estado}
+          onChange={(e) => setForm({ ...form, estado: e.target.value })}
+        >
+          {ESTADOS_ASADO.map((item) => (
+            <option key={item.value} value={item.value}>
+              {item.label}
+            </option>
+          ))}
+        </select>
+
+        <p>Participantes:</p>
+        <input
+          value={newParticipant}
+          onChange={(e) => setNewParticipant(e.target.value)}
+        />
+        <button type="button" onClick={handleAddParticipant}>
+          Agregar
+        </button>
+        <ul>
+          {form.participantes.map((person) => (
+            <li key={person}>{person}</li>
+          ))}
+        </ul>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <Link href={"/calculadora"}>Calculadora</Link>
+    </>
   );
 }

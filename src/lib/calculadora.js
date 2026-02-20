@@ -1,8 +1,8 @@
-export const FACTORES = {
-  tranquilo: 0.28,
-  normal: 0.35,
-  carnivoros: 0.5,
-};
+export const TIPOS_ASADO = [
+  { value: "tranquilo", label: "Tranquilo", factor: 0.28 },
+  { value: "normal", label: "Normal", factor: 0.35 },
+  { value: "carnivoros", label: "Carnívoros", factor: 0.5 },
+];
 
 export const CORTES = [
   { nombre: "Vacío", porcentaje: 0.35 },
@@ -13,7 +13,8 @@ export const CORTES = [
 ];
 
 export function calcularCarne(personas, tipo) {
-  const totalKg = Number((personas * FACTORES[tipo]).toFixed(2));
+  const tipoAsado = TIPOS_ASADO.find((t) => t.value === tipo);
+  const totalKg = Number((personas * tipoAsado.factor).toFixed(2));
   return {
     totalKg,
     desglose: CORTES.map((corte) => ({

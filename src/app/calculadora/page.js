@@ -1,11 +1,11 @@
 "use client";
 
-import { calcularCarne } from "@/lib/calculadora";
+import { calcularCarne, TIPOS_ASADO } from "@/lib/calculadora";
 import { useState } from "react";
 
 export default function Page() {
   const [form, setForm] = useState({
-    tipo: "normal",
+    tipo: TIPOS_ASADO[0].value,
     totalPersonas: 0,
   });
 
@@ -14,11 +14,21 @@ export default function Page() {
   return (
     <div>
       <form>
-        <input
+        <p>Tipo de asado:</p>
+        <select
           value={form.tipo}
           onChange={(e) => setForm({ ...form, tipo: e.target.value })}
-        />
+        >
+          {TIPOS_ASADO.map((item) => (
+            <option key={item.value} value={item.value}>
+              {item.label}
+            </option>
+          ))}
+        </select>
+
+        <p>Cantidad de personas:</p>
         <input
+          type="number"
           value={form.totalPersonas}
           onChange={(e) =>
             setForm({ ...form, totalPersonas: Number(e.target.value) })

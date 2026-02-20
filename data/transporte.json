@@ -1,65 +1,47 @@
 [
   {
-    "id": "87dbbc9b-2d71-4c42-b452-487ca0f8bc1c",
-    "asadoId": "123",
+    "id": "8c6cbf90-0191-4a2a-9f60-72cdbc5e997a",
+    "asadoId": "82f9d684-7911-4030-a123-1240902ea438",
     "nombre": "Edu",
     "rol": "conductor",
     "tipoTransporte": "auto",
     "lugaresDisponibles": 3,
-    "creadoEn": "2026-02-20T15:04:33.045Z"
+    "creadoEn": "2026-02-20T18:42:22.856Z"
   },
   {
-    "id": "25666414-9e11-43fe-b323-58ceba840ecd",
-    "asadoId": "123",
-    "nombre": "Lau",
-    "rol": "conductor",
-    "tipoTransporte": "moto",
-    "lugaresDisponibles": 1,
-    "creadoEn": "2026-02-20T15:05:01.039Z"
-  },
-  {
-    "id": "2c623ac8-b755-4258-8ce8-39c8b54b2def",
-    "asadoId": "123",
+    "id": "f5399b53-467d-43ef-bd30-4e44eb1277c7",
+    "asadoId": "82f9d684-7911-4030-a123-1240902ea438",
     "nombre": "Sergio",
     "rol": "conductor",
     "tipoTransporte": "auto",
-    "lugaresDisponibles": "4",
-    "creadoEn": "2026-02-20T15:14:51.951Z"
-  },
-  {
-    "id": "c3537a0c-d781-4f58-a32a-70976becbff5",
-    "asadoId": "123",
-    "nombre": "coso",
-    "rol": "camino",
-    "tipoTransporte": "",
     "lugaresDisponibles": 0,
-    "creadoEn": "2026-02-20T15:19:30.461Z"
+    "creadoEn": "2026-02-20T18:42:46.546Z"
   },
   {
-    "id": "0ce085d6-8118-4905-adb6-75814c2ddcff",
-    "asadoId": "123",
-    "nombre": "coso",
-    "rol": "camino",
-    "tipoTransporte": "",
+    "id": "2d92b397-98bb-4a57-a62c-c19089effbca",
+    "asadoId": "82f9d684-7911-4030-a123-1240902ea438",
+    "nombre": "Bruno",
+    "rol": "pasajero_necesita",
+    "tipoTransporte": "auto",
     "lugaresDisponibles": 0,
-    "creadoEn": "2026-02-20T15:21:28.888Z"
+    "creadoEn": "2026-02-20T18:45:23.348Z"
   },
   {
-    "id": "e81d6d04-1e90-49e4-8792-02506da05ca9",
-    "asadoId": "123",
-    "nombre": "asd",
+    "id": "4b45ddac-7ef0-41d2-b6d1-2325ce9409a4",
+    "asadoId": "82f9d684-7911-4030-a123-1240902ea438",
+    "nombre": "Edu",
     "rol": "conductor",
-    "tipoTransporte": "camion",
-    "lugaresDisponibles": "23",
-    "creadoEn": "2026-02-20T15:21:50.478Z"
+    "tipoTransporte": "moto",
+    "lugaresDisponibles": 4,
+    "creadoEn": "2026-02-20T18:50:21.753Z"
   },
   {
-    "id": "09eba762-a9a3-45f2-868a-ebf5778b4ee5",
-    "asadoId": "123",
-    "nombre": "ddd",
-    "rol": "asd",
-    "tipoTransporte": "asd",
-    "lugaresDisponibles": "123",
-    "creadoEn": "2026-02-20T15:22:04.413Z"
+    "id": "16653118-2567-4327-9447-293ba62315fc",
+    "asadoId": "82f9d684-7911-4030-a123-1240902ea438",
+    "nombre": "Edu",
+    "rol": "independiente",
+    "tipoTransporte": "auto",
+    "lugaresDisponibles": 0,
+    "creadoEn": "2026-02-20T18:53:09.405Z"
   }
 ]

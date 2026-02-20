@@ -1,7 +1,14 @@
+import Link from "next/link";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        <nav>
+          <Link href="/">Inicio</Link>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }
