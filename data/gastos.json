@@ -1,0 +1,26 @@
+[
+  {
+    "id": "01b5600f-9198-46f4-9f82-3a3efba803a2",
+    "asadoId": "e7b54ae3-c905-4c2a-9fb9-40411c0c5783",
+    "quien": "Juan",
+    "descripcion": "Nafta",
+    "monto": 125,
+    "creadoEn": "2026-02-20T11:51:32.470Z"
+  },
+  {
+    "id": "e065de32-299d-46f5-9d69-f31b91608ea3",
+    "asadoId": "e7b54ae3-c905-4c2a-9fb9-40411c0c5783",
+    "quien": "Maria",
+    "descripcion": "Ensalada",
+    "monto": 40,
+    "creadoEn": "2026-02-20T11:52:31.053Z"
+  },
+  {
+    "id": "c532703e-52e0-421b-b076-ec61c7442119",
+    "asadoId": "e7b54ae3-c905-4c2a-9fb9-40411c0c5783",
+    "quien": "Edu",
+    "descripcion": "Carne",
+    "monto": "2000",
+    "creadoEn": "2026-02-20T13:27:57.333Z"
+  }
+]

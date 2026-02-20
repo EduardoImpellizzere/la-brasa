@@ -7,9 +7,7 @@
     "hora": "d",
     "lugar": "f",
     "estado": "planeado",
-    "participantes": [
-      "g"
-    ]
+    "participantes": ["aa", "ss", "dd"]
   },
   {
     "id": "8f19df45-f9d9-4916-9e03-e18351db32fa",
@@ -19,9 +17,7 @@
     "hora": "s",
     "lugar": "d",
     "estado": "planeado",
-    "participantes": [
-      "f"
-    ]
+    "participantes": ["f"]
   },
   {
     "id": "8bab8ce7-dd04-4a74-9e75-d26e5fd1dba1",
@@ -31,10 +27,7 @@
     "hora": "as",
     "lugar": "s",
     "estado": "planeado",
-    "participantes": [
-      "asd",
-      "d"
-    ]
+    "participantes": ["asd", "d"]
   },
   {
     "id": "c4652c84-867f-41ba-96c1-0927adb98c35",
@@ -44,11 +37,7 @@
     "hora": "d",
     "lugar": "f",
     "estado": "planeado",
-    "participantes": [
-      "aa",
-      "ss",
-      "dd"
-    ]
+    "participantes": ["aa", "ss", "dd"]
   },
   {
     "id": "7a7de7db-b91d-42b0-b94a-940766f580e0",
@@ -58,10 +47,6 @@
     "hora": "sss",
     "lugar": "ss",
     "estado": "planeado",
-    "participantes": [
-      "d",
-      "sa",
-      "asd"
-    ]
+    "participantes": ["d", "sa", "asd"]
   }
 ]
