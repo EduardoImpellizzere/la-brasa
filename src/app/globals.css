@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Font sizes */
+  --text-xxs: 10px;
+  --text-xs: 11px;
+  --text-sm: 12px;
+  --text-base: 14px;
+  --text-md: 15px;
+  --text-lg: 16px;
+  --text-xl: 22px;
+
+  /* Font weights */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Colors */
+  --surface: #ffffff;
+  --border: #e8e0d4;
+  --border2: #d4c9b8;
+  --bg: #faf7f2;
+  --bg2: #f3eee6;
+  --text: #1c1810;
+  --text2: #5c5144;
+  --text3: #9c8e7e;
+  --ember: #d95f02;
+  --ember2: #f08030;
+  --ember-bg: #fdf0e8;
+  --ember-border: #f5c9a8;
+  --green: #2d6a4f;
+  --green-bg: #ebf5f0;
+  --red: #c1440e;
+  --red-bg: #fdeee8;
+}
+
+body {
+  font-family: var(--font-outfit);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}

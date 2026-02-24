@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import styles from "./GastosForm.module.css";
 
 export default function GastosForm({ id, participantes = [] }) {
   const [form, setForm] = useState({
@@ -30,33 +31,44 @@ export default function GastosForm({ id, participantes = [] }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <p>Quien:</p>
-      <select
-        value={form.quien}
-        onChange={(e) => setForm({ ...form, quien: e.target.value })}
-      >
-        {participantes.map((item) => (
-          <option key={item} value={item}>
-            {item}
-          </option>
-        ))}
-      </select>
+    <form className={styles.form} onSubmit={handleSubmit}>
+      <div className={styles.field}>
+        <label className={styles.label}>Quien:</label>
+        <select
+          className={styles.select}
+          value={form.quien}
+          onChange={(e) => setForm({ ...form, quien: e.target.value })}
+        >
+          {participantes.map((item) => (
+            <option key={item} value={item}>
+              {item}
+            </option>
+          ))}
+        </select>
+      </div>
 
-      <p>Cuanto:</p>
-      <input
-        type="number"
-        value={form.monto}
-        onChange={(e) => setForm({ ...form, monto: Number(e.target.value) })}
-      />
+      <div className={styles.field}>
+        <label className={styles.label}>Cuanto:</label>
+        <input
+          className={styles.input}
+          type="number"
+          value={form.monto}
+          onChange={(e) => setForm({ ...form, monto: Number(e.target.value) })}
+        />
+      </div>
 
-      <p>En que?</p>
-      <input
-        value={form.descripcion}
-        onChange={(e) => setForm({ ...form, descripcion: e.target.value })}
-      />
+      <div className={styles.field}>
+        <label className={styles.label}>En que?</label>
+        <input
+          className={styles.input}
+          value={form.descripcion}
+          onChange={(e) => setForm({ ...form, descripcion: e.target.value })}
+        />
+      </div>
 
-      <button type="submit">Enviar</button>
+      <button className={styles.btnPrimary} type="submit">
+        Enviar
+      </button>
     </form>
   );
 }

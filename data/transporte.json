@@ -43,5 +43,32 @@
     "tipoTransporte": "auto",
     "lugaresDisponibles": 0,
     "creadoEn": "2026-02-20T18:53:09.405Z"
+  },
+  {
+    "id": "91ae67a8-a281-4b01-9e01-16f2603c366f",
+    "asadoId": "481571f1-85b5-483b-9865-b46b4dfbc37f",
+    "nombre": "Edu",
+    "rol": "conductor",
+    "tipoTransporte": "auto",
+    "lugaresDisponibles": 3,
+    "creadoEn": "2026-02-24T14:51:31.036Z"
+  },
+  {
+    "id": "8ad302f7-ba8b-4132-b79f-3c68a0c4c776",
+    "asadoId": "481571f1-85b5-483b-9865-b46b4dfbc37f",
+    "nombre": "Lau",
+    "rol": "pasajero_necesita",
+    "tipoTransporte": "auto",
+    "lugaresDisponibles": 0,
+    "creadoEn": "2026-02-24T15:14:39.058Z"
+  },
+  {
+    "id": "95bad5a3-1d3d-4752-aaf0-939ac2042a0c",
+    "asadoId": "481571f1-85b5-483b-9865-b46b4dfbc37f",
+    "nombre": "Sergio",
+    "rol": "independiente",
+    "tipoTransporte": "auto",
+    "lugaresDisponibles": 0,
+    "creadoEn": "2026-02-24T15:14:49.961Z"
   }
 ]

@@ -22,5 +22,29 @@
     "descripcion": "Gasolina",
     "monto": 13.5,
     "creadoEn": "2026-02-20T18:40:03.918Z"
+  },
+  {
+    "id": "a32481cf-de6e-461f-9521-5b8041831fc2",
+    "asadoId": "481571f1-85b5-483b-9865-b46b4dfbc37f",
+    "quien": "Edu",
+    "descripcion": "Carne",
+    "monto": 4,
+    "creadoEn": "2026-02-24T11:58:43.238Z"
+  },
+  {
+    "id": "8f44e7af-97dd-46cb-8173-709aeee2e9e4",
+    "asadoId": "481571f1-85b5-483b-9865-b46b4dfbc37f",
+    "quien": "Lau",
+    "descripcion": "Ensaladas",
+    "monto": 15,
+    "creadoEn": "2026-02-24T14:46:56.276Z"
+  },
+  {
+    "id": "f80775f3-dc87-4415-8df6-3e339f31ebc5",
+    "asadoId": "481571f1-85b5-483b-9865-b46b4dfbc37f",
+    "quien": "Edu",
+    "descripcion": "Pan",
+    "monto": 13,
+    "creadoEn": "2026-02-24T14:47:17.827Z"
   }
 ]

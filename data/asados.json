@@ -2,7 +2,7 @@
   {
     "id": "82f9d684-7911-4030-a123-1240902ea438",
     "creadoEn": "2026-02-20T18:31:25.167Z",
-    "nombre": "Asado 1",
+    "nombre": "Cumple Luci",
     "fecha": "2026-02-25",
     "hora": "19:30",
     "lugar": "Pobla de farnals",
@@ -13,6 +13,21 @@
       "Sergio",
       "Anto",
       "Bruno"
+    ]
+  },
+  {
+    "id": "481571f1-85b5-483b-9865-b46b4dfbc37f",
+    "creadoEn": "2026-02-24T10:35:10.486Z",
+    "nombre": "Cumple",
+    "fecha": "2026-02-25",
+    "hora": "13:30",
+    "lugar": "Casa de Ramon",
+    "estado": "confirmado",
+    "participantes": [
+      "Edu",
+      "Lau",
+      "Anto",
+      "Sergio"
     ]
   }
 ]

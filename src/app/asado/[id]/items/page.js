@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import ItemForm from "./ItemForm";
 import { ESTADOS_ITEM } from "@/lib/opciones";
 import Link from "next/link";
+import styles from "./page.module.css";
 
 export default async function Page({ params }) {
   const { id } = await params;
@@ -11,26 +12,54 @@ export default async function Page({ params }) {
     fetch(`http://localhost:3000/api/asados/${id}`),
   ]);
 
-  const items = await responseItems.json();
-  const asado = await responseAsado.json();
+  const dataItems = await responseItems.json();
+  const dataAsado = await responseAsado.json();
 
-  if (asado.error) {
+  if (dataAsado.error) {
     notFound();
   }
 
   return (
-    <div>
-      <p>Quien lleva que cosa</p>
-      <ItemForm id={id} participantes={asado.participantes} />
-      {items.map((item) => (
-        <ul key={item.id}>
-          <li>{item.nombre}</li>
-          <li>{item.quien}</li>
-          <li>{ESTADOS_ITEM.find((e) => e.value === item.estado)?.label}</li>
-        </ul>
-      ))}
+    <>
+      <div className={styles.header}>
+        <div className={styles.eyebrow}>{dataAsado.nombre}</div>
+        <h1 className={styles.title}>Quién lleva qué</h1>
+      </div>
 
-      <Link href={`/asado/${id}`}>Volver</Link>
-    </div>
+      <div className={styles.content}>
+        <div className={styles.section}>
+          <ItemForm id={id} participantes={dataAsado.participantes} />
+        </div>
+        <div className={styles.section}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.sectionTitle}>Items cargados</span>
+          </div>
+          <ul className={styles.participantList}>
+            {dataItems.map((item, index) => (
+              <li key={index} className={styles.participantRow}>
+                <div className={styles.itemInfo}>
+                  <span className={styles.participantName}>{item.nombre}</span>
+                  <span className={styles.sectionMeta}>{item.quien}</span>
+                </div>
+
+                <span
+                  key={index}
+                  className={`${styles.chip} ${
+                    item.estado === "confirmado" || item.estado === "comprado"
+                      ? styles.chipOk
+                      : styles.chipPending
+                  }`}
+                >
+                  {item.estado === "confirmado" || item.estado === "comprado"
+                    ? "✓"
+                    : "·"}{" "}
+                  {ESTADOS_ITEM.find((e) => e.value === item.estado)?.label}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </>
   );
 }

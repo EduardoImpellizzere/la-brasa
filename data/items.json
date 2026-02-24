@@ -22,5 +22,13 @@
     "quien": "Anto",
     "estado": "confirmado",
     "creadoEn": "2026-02-20T18:33:57.154Z"
+  },
+  {
+    "id": "d462e9e9-27c5-4dc7-bf84-34c7feb1c6db",
+    "asadoId": "481571f1-85b5-483b-9865-b46b4dfbc37f",
+    "nombre": "Carne",
+    "quien": "Edu",
+    "estado": "comprado",
+    "creadoEn": "2026-02-24T10:38:37.614Z"
   }
 ]
