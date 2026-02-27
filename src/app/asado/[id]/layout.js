@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import "./layout.module.css";
 import styles from "./layout.module.css";
@@ -8,12 +9,21 @@ export default async function Layout({ children, params }) {
   return (
     <div className={styles.layout}>
       <aside className={styles.sidebar}>
-        <header className={styles.logo}>
-          <div className={styles.logoIcon}>🔥</div>
-          <div className={styles.logoText}>
-            El<span>Asado</span>
-          </div>
-        </header>
+        <Link className={styles.logoLink} href={`/asado/${id}`}>
+          <header className={styles.logo}>
+            <div className={styles.logoIcon}>
+              <Image
+                src="/logo.svg"
+                alt="La Brasa logo"
+                width={60}
+                height={60}
+              />
+            </div>
+            <div className={styles.logoText}>
+              La<span>Brasa</span>
+            </div>
+          </header>
+        </Link>
 
         <nav className={styles.nav}>
           <Link className={styles.navLink} href={`/`}>

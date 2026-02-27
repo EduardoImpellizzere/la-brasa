@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { ESTADOS_ASADO } from "@/lib/opciones";
-import Link from "next/link";
+import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Page() {
@@ -41,9 +41,11 @@ export default function Page() {
     <>
       <div className={styles.screen}>
         <div className={styles.logo}>
-          <div className={styles.logoIcon}>🔥</div>
+          <div className={styles.logoIcon}>
+            <Image src="/logo.svg" alt="La Brasa logo" width={60} height={60} />
+          </div>
           <div className={styles.logoText}>
-            El<span>Asado</span>
+            La<span>Brasa</span>
           </div>
         </div>
 

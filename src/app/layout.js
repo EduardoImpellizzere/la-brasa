@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Cormorant_Garamond, Outfit } from "next/font/google";
+import { Cormorant_Garamond, Outfit, Oswald } from "next/font/google";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -13,9 +13,18 @@ const outfit = Outfit({
   variable: "--font-outfit",
 });
 
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700"],
+  variable: "--font-oswald",
+});
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className={`${cormorant.variable} ${outfit.variable}`}>
+    <html
+      lang="es"
+      className={`${cormorant.variable} ${outfit.variable} ${oswald.variable}`}
+    >
       <body>{children}</body>
     </html>
   );
