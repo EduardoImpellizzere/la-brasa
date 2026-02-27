@@ -26,6 +26,13 @@
   max-width: 680px;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 20px;
+  align-items: start;
+}
+
 .section {
   background: var(--surface);
   border: 1px solid var(--border);

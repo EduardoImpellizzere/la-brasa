@@ -46,5 +46,29 @@
     "descripcion": "Pan",
     "monto": 13,
     "creadoEn": "2026-02-24T14:47:17.827Z"
+  },
+  {
+    "id": "1276dec0-bcf4-4237-8bea-c368bf1e6ff8",
+    "asadoId": "82f9d684-7911-4030-a123-1240902ea438",
+    "quien": "Edu",
+    "descripcion": "Nafta",
+    "monto": 10,
+    "creadoEn": "2026-02-24T16:38:58.675Z"
+  },
+  {
+    "id": "adf23219-31df-4263-9462-03f4c7b25beb",
+    "asadoId": "82f9d684-7911-4030-a123-1240902ea438",
+    "quien": "Anto",
+    "descripcion": "Bebidas",
+    "monto": 33.5,
+    "creadoEn": "2026-02-24T18:24:30.616Z"
+  },
+  {
+    "id": "8913558c-01a3-4b69-b93b-8760b70d53fc",
+    "asadoId": "82f9d684-7911-4030-a123-1240902ea438",
+    "quien": "Bruno",
+    "descripcion": "Pan y drogas",
+    "monto": 6.78,
+    "creadoEn": "2026-02-24T18:25:50.176Z"
   }
 ]
