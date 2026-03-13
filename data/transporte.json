@@ -70,5 +70,14 @@
     "tipoTransporte": "auto",
     "lugaresDisponibles": 0,
     "creadoEn": "2026-02-24T15:14:49.961Z"
+  },
+  {
+    "id": "020304b4-55f1-4905-a1eb-c7937ee42aca",
+    "asadoId": "82f9d684-7911-4030-a123-1240902ea438",
+    "nombre": "Edu",
+    "rol": "pasajero_flexible",
+    "tipoTransporte": "auto",
+    "lugaresDisponibles": 0,
+    "creadoEn": "2026-03-02T18:52:48.125Z"
   }
 ]

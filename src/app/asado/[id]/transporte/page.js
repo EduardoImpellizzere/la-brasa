@@ -3,6 +3,7 @@ import TransporteForm from "./TransporteForm";
 import { ROLES_TRANSPORTE, TIPOS_TRANSPORTE } from "@/lib/opciones";
 import Link from "next/link";
 import styles from "./page.module.css";
+import PageHeader from "@/components/PageHeader";
 
 export default async function Page({ params }) {
   const { id } = await params;
@@ -28,10 +29,7 @@ export default async function Page({ params }) {
 
   return (
     <>
-      <div className={styles.header}>
-        <div className={styles.eyebrow}>{dataAsado.nombre}</div>
-        <h1 className={styles.title}>Como va cada uno?</h1>
-      </div>
+      <PageHeader eyebrow={dataAsado.nombre} title="Como va cada uno?" />
 
       <div className={styles.content}>
         <div className={styles.section}>

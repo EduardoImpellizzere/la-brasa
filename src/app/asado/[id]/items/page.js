@@ -3,6 +3,8 @@ import ItemForm from "./ItemForm";
 import { ESTADOS_ITEM } from "@/lib/opciones";
 import Link from "next/link";
 import styles from "./page.module.css";
+import PageHeader from "@/components/PageHeader";
+import ChipByState from "@/components/ChipByState";
 
 export default async function Page({ params }) {
   const { id } = await params;
@@ -21,10 +23,7 @@ export default async function Page({ params }) {
 
   return (
     <>
-      <div className={styles.header}>
-        <div className={styles.eyebrow}>{dataAsado.nombre}</div>
-        <h1 className={styles.title}>Quién lleva qué</h1>
-      </div>
+      <PageHeader eyebrow={dataAsado.nombre} title="Quién lleva qué" />
 
       <div className={styles.content}>
         <div className={styles.section}>
@@ -42,19 +41,13 @@ export default async function Page({ params }) {
                   <span className={styles.sectionMeta}>{item.quien}</span>
                 </div>
 
-                <span
+                <ChipByState
                   key={index}
-                  className={`${styles.chip} ${
-                    item.estado === "confirmado" || item.estado === "comprado"
-                      ? styles.chipOk
-                      : styles.chipPending
-                  }`}
-                >
-                  {item.estado === "confirmado" || item.estado === "comprado"
-                    ? "✓"
-                    : "·"}{" "}
-                  {ESTADOS_ITEM.find((e) => e.value === item.estado)?.label}
-                </span>
+                  state={item.estado}
+                  label={
+                    ESTADOS_ITEM.find((e) => e.value === item.estado)?.label
+                  }
+                />
               </li>
             ))}
           </ul>

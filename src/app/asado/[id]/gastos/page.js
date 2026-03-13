@@ -2,6 +2,8 @@ import Link from "next/link";
 import GastosForm from "./GastosForm";
 import styles from "./page.module.css";
 import { calcularDeudas } from "@/lib/gastos";
+import PageHeader from "@/components/PageHeader";
+import ChipByState from "@/components/ChipByState";
 
 export default async function Page({ params }) {
   const { id } = await params;
@@ -13,7 +15,7 @@ export default async function Page({ params }) {
 
   const dataGastos = await responseGastos.json();
   const dataAsado = await responseAsado.json();
-  const { balances, transacciones } = calcularDeudas(
+  const { transacciones } = calcularDeudas(
     dataGastos.expenses,
     dataAsado.participantes,
   );
@@ -24,10 +26,7 @@ export default async function Page({ params }) {
 
   return (
     <>
-      <div className={styles.header}>
-        <div className={styles.eyebrow}>{dataAsado.nombre}</div>
-        <h1 className={styles.title}>Ingreso de Gastos</h1>
-      </div>
+      <PageHeader eyebrow={dataAsado.nombre} title="Ingreso de Gastos" />
 
       <div className={styles.content}>
         <div className={styles.grid}>
@@ -76,9 +75,7 @@ export default async function Page({ params }) {
                       {t.de} → {t.para}
                     </span>
                   </div>
-                  <span className={`${styles.chip} ${styles.chipWarn}`}>
-                    €{t.monto}
-                  </span>
+                  <ChipByState state="warning" label={`€${t.monto}`} />
                 </div>
               ))}
             </div>

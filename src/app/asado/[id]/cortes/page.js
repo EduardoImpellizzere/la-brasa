@@ -4,18 +4,17 @@ import { useState } from "react";
 import styles from "./page.module.css";
 import { TIPOS_COCINA, GUIA } from "@/lib/guiaCortes";
 import { Lightbulb } from "lucide-react";
+import PageHeader from "@/components/PageHeader";
 
 export default function Page(params) {
   const [tipoCocina, setTipoCocina] = useState(TIPOS_COCINA[0].value);
 
   return (
     <>
-      <div className={styles.header}>
-        <h1 className={styles.title}>Guía de cortes</h1>
-        <div className={styles.subtitle}>
-          Si no tenes en claro que usar, desde LaBrasa te damos una mano
-        </div>
-      </div>
+      <PageHeader
+        title="Guía de cortes"
+        subtitle="Si no tenes en claro que usar, desde LaBrasa te damos una mano"
+      />
 
       <div className={styles.pills}>
         {TIPOS_COCINA.map((tipo) => (

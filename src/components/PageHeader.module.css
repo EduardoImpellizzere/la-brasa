@@ -1,0 +1,26 @@
+.header {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ember);
+  margin-bottom: 6px;
+}
+
+.title {
+  font-family: var(--font-oswald);
+  font-size: var(--text-xxxxl);
+  font-weight: var(--weight-semibold);
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: var(--text-base);
+  color: var(--text3);
+  margin-top: 4px;
+}

@@ -15,6 +15,9 @@
   --text-md: 15px;
   --text-lg: 16px;
   --text-xl: 22px;
+  --text-xxl: 26px;
+  --text-xxxl: 34px;
+  --text-xxxxl: 38px;
 
   /* Font weights */
   --weight-light: 300;

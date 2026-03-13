@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { ESTADOS_ASADO } from "@/lib/opciones";
 import Image from "next/image";
 import styles from "./page.module.css";
+import PageHeader from "@/components/PageHeader";
 
 export default function Page() {
   const [form, setForm] = useState({
@@ -50,10 +51,7 @@ export default function Page() {
         </div>
 
         <div className={styles.container}>
-          <div className={styles.header}>
-            <div className={styles.eyebrow}>Nuevo asado</div>
-            <h1 className={styles.title}>Planificá tu asado</h1>
-          </div>
+          <PageHeader eyebrow="Nuevo asado" title="Planificá tu asado" />
 
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.field}>

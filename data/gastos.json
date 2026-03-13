@@ -70,5 +70,13 @@
     "descripcion": "Pan y drogas",
     "monto": 6.78,
     "creadoEn": "2026-02-24T18:25:50.176Z"
+  },
+  {
+    "id": "80c91121-9526-44c1-adef-30b152d97f03",
+    "asadoId": "82f9d684-7911-4030-a123-1240902ea438",
+    "quien": "Bruno",
+    "descripcion": "c",
+    "monto": 3,
+    "creadoEn": "2026-03-02T18:59:28.282Z"
   }
 ]

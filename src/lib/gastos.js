@@ -3,20 +3,17 @@ export function calcularDeudas(expenses, participantes) {
   const cuota = (
     expenses.reduce((total, e) => total + e.monto, 0) / participantes.length
   ).toFixed(2);
-  console.log("Cuota: ", cuota);
 
   // Cuánto gastó cada uno
   const gastadoPor = {};
   participantes.forEach((p) => (gastadoPor[p] = 0));
   expenses.forEach((e) => (gastadoPor[e.quien] += e.monto));
-  console.log("gastadoPor: ", gastadoPor);
 
   // Determinar el balance de cada uno | positivo = crédito, negativo = deuda
   const balances = participantes.map((p) => ({
     nombre: p,
     balance: Number((gastadoPor[p] - cuota).toFixed(2)),
   }));
-  console.log("balances: ", balances);
 
   // Separar deudores y acreedores
   const deudores = balances
@@ -49,5 +46,5 @@ export function calcularDeudas(expenses, participantes) {
     if (acreedor.balance < 0.01) acreedores.shift();
   }
 
-  return { balances, transacciones };
+  return { transacciones };
 }

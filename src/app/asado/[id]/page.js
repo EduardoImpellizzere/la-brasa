@@ -5,6 +5,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import styles from "./page.module.css";
 import { Calendar, MapPin, Clock, House, KeyRound } from "lucide-react";
+import PageHeader from "@/components/PageHeader";
+import ChipByState from "@/components/ChipByState";
 
 export default async function Page({ params }) {
   const { id } = await params;
@@ -35,23 +37,24 @@ export default async function Page({ params }) {
 
   return (
     <>
-      <div className={styles.header}>
-        <div className={styles.eyebrow}>Próximo asado</div>
-        <h1 className={styles.title}>{dataAsado.nombre}</h1>
-        <div className={styles.subtitle}>
-          <Calendar size={14} /> {formatearFecha(dataAsado.fecha)} ·{" "}
-          <Clock size={14} /> {dataAsado.hora}
-          {"hs"} · <MapPin size={14} /> {dataAsado.lugar}
-        </div>
-      </div>
+      <PageHeader
+        eyebrow="Próximo asado"
+        title={dataAsado.nombre}
+        subtitle={
+          <>
+            {" "}
+            <Calendar size={14} /> {formatearFecha(dataAsado.fecha)} ·{" "}
+            <Clock size={14} /> {dataAsado.hora}
+            {"hs"} · <MapPin size={14} /> {dataAsado.lugar}
+          </>
+        }
+      />
 
       <div className={styles.cards}>
         <div className={styles.card}>
           <div className={styles.cardValue}>{totalPersonas}</div>
           <div className={styles.cardLabel}>Personas confirmadas</div>
-          <div className={`${styles.chip} ${styles.chipOk}`}>
-            ✓ Todos confirmados
-          </div>
+          <ChipByState state="confirmado" label="Todos confirmados" />
         </div>
 
         <div className={styles.card}>
@@ -59,9 +62,10 @@ export default async function Page({ params }) {
             € {dataGastos.summary.totalCost}
           </div>
           <div className={styles.cardLabel}>Gastado hasta ahora</div>
-          <div className={`${styles.chip} ${styles.chipWarn}`}>
-            {totalGastosCargados} gastos cargados
-          </div>
+          <ChipByState
+            state="warning"
+            label={`${totalGastosCargados} gastos cargados`}
+          />
         </div>
 
         <div className={styles.card}>
@@ -91,19 +95,11 @@ export default async function Page({ params }) {
             </div>
             <div className={styles.chips}>
               {dataItems.map((item, index) => (
-                <span
+                <ChipByState
                   key={index}
-                  className={`${styles.chip} ${
-                    item.estado === "confirmado" || item.estado === "comprado"
-                      ? styles.chipOk
-                      : styles.chipPending
-                  }`}
-                >
-                  {item.estado === "confirmado" || item.estado === "comprado"
-                    ? "✓"
-                    : "·"}{" "}
-                  {item.nombre}
-                </span>
+                  state={item.estado}
+                  label={item.nombre}
+                />
               ))}
             </div>
           </div>
@@ -123,19 +119,13 @@ export default async function Page({ params }) {
                     <span className={styles.sectionMeta}>{item.quien}</span>
                   </div>
 
-                  <span
+                  <ChipByState
                     key={index}
-                    className={`${styles.chip} ${
-                      item.estado === "confirmado" || item.estado === "comprado"
-                        ? styles.chipOk
-                        : styles.chipPending
-                    }`}
-                  >
-                    {item.estado === "confirmado" || item.estado === "comprado"
-                      ? "✓"
-                      : "·"}{" "}
-                    {ESTADOS_ITEM.find((e) => e.value === item.estado)?.label}
-                  </span>
+                    state={item.estado}
+                    label={
+                      ESTADOS_ITEM.find((e) => e.value === item.estado)?.label
+                    }
+                  />
                 </li>
               ))}
             </ul>
@@ -171,7 +161,11 @@ export default async function Page({ params }) {
                     {person.charAt(0).toUpperCase()}
                   </div>
                   <span className={styles.participantName}>{person}</span>
-                  <span className={styles.participantStatus}>✓ Confirmado</span>
+                  <ChipByState
+                    key={index}
+                    state="confirmado"
+                    label="Confirmado"
+                  />
                 </li>
               ))}
             </ul>

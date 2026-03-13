@@ -26,8 +26,8 @@
 
 .logoText {
   font-family: var(--font-oswald);
-  font-size: 26px;
-  font-weight: 700;
+  font-size: var(--text-xxl);
+  font-weight: var(--weight-bold);
   color: var(--text);
 }
 

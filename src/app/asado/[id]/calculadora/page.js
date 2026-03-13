@@ -3,6 +3,7 @@
 import { calcularCarne, TIPOS_ASADO } from "@/lib/calculadora";
 import { useState } from "react";
 import styles from "./page.module.css";
+import PageHeader from "@/components/PageHeader";
 
 export default function Page(params) {
   const [form, setForm] = useState({
@@ -14,12 +15,10 @@ export default function Page(params) {
 
   return (
     <>
-      <div className={styles.header}>
-        <h1 className={styles.title}>Calculadora</h1>
-        <div className={styles.subtitle}>
-          Por si necesitas ayuda para calcular cuanto necesitas comprar
-        </div>
-      </div>
+      <PageHeader
+        title="Calculadora"
+        subtitle="Por si necesitas ayuda para calcular cuanto necesitas comprar"
+      />
 
       <div className={styles.content}>
         <div className={styles.section}>
