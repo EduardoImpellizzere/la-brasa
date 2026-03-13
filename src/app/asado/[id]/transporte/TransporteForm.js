@@ -17,7 +17,7 @@ export default function TransporteForm({ id, participantes = [] }) {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    await fetch(`http://localhost:3000/api/asados/${id}/transporte`, {
+    await fetch(`${process.env.NEXT_PUBLIC_URL}/api/asados/${id}/transporte`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),

@@ -16,7 +16,7 @@ export default function ItemForm({ id, participantes = [] }) {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    await fetch(`http://localhost:3000/api/asados/${id}/items`, {
+    await fetch(`${process.env.NEXT_PUBLIC_URL}/api/asados/${id}/items`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),

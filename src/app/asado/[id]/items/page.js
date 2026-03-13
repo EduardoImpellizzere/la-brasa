@@ -10,8 +10,8 @@ export default async function Page({ params }) {
   const { id } = await params;
 
   const [responseItems, responseAsado] = await Promise.all([
-    fetch(`http://localhost:3000/api/asados/${id}/items`),
-    fetch(`http://localhost:3000/api/asados/${id}`),
+    fetch(`${process.env.NEXT_PUBLIC_URL}/api/asados/${id}/items`),
+    fetch(`${process.env.NEXT_PUBLIC_URL}/api/asados/${id}`),
   ]);
 
   const dataItems = await responseItems.json();
