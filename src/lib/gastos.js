@@ -1,13 +1,16 @@
 export function calcularDeudas(expenses, participantes) {
   // Gasto total dividido entre todos los participantes
-  const cuota = (
-    expenses.reduce((total, e) => total + e.monto, 0) / participantes.length
-  ).toFixed(2);
+  const cuota = Number(
+    (
+      expenses.reduce((total, e) => total + Number(e.monto), 0) /
+      participantes.length
+    ).toFixed(2),
+  );
 
   // Cuánto gastó cada uno
   const gastadoPor = {};
   participantes.forEach((p) => (gastadoPor[p] = 0));
-  expenses.forEach((e) => (gastadoPor[e.quien] += e.monto));
+  expenses.forEach((e) => (gastadoPor[e.quien] += Number(e.monto)));
 
   // Determinar el balance de cada uno | positivo = crédito, negativo = deuda
   const balances = participantes.map((p) => ({
