@@ -51,7 +51,7 @@ export default async function Page({ params }) {
                 <span className={styles.participantName}>{item.nombre}</span>
                 <span className={styles.sectionMeta}>
                   {item.rol === "conductor" &&
-                    `${TIPOS_TRANSPORTE.find((t) => t.value === item.tipoTransporte)?.label} · ${item.lugaresDisponibles} lugares libres`}
+                    `${TIPOS_TRANSPORTE.find((t) => t.value === item.tipo_transporte)?.label} · ${item.lugares_disponibles} lugares libres`}
                 </span>
               </div>
 
